@@ -1,31 +1,9 @@
-/*
-  So you like the style of impress.js demo?
-  Or maybe you are just curious how it was done?
+/* 
+  CSS for presentation 
+  
+  Initially copied from Bartek Szopka's demo presentation:
+    http://bartaz.github.com/impress.js
 
-  You couldn't find a better place to find out!
-
-  Welcome to the stylesheet impress.js demo presentation.
-
-  Please remember that it is not meant to be a part of impress.js and is
-  not required by impress.js.
-  I expect that anyone creating a presentation for impress.js would create
-  their own set of styles.
-
-  But feel free to read through it and learn how to get the most of what
-  impress.js provides.
-
-  And let me be your guide.
-
-  Shall we begin?
-*/
-
-
-/*
-  We start with a good ol' reset.
-  That's the one by Eric Meyer http://meyerweb.com/eric/tools/css/reset/
-
-  You can probably argue if it is needed here, or not, but for sure it
-  doesn't do any harm and gives us a fresh start.
 */
 
 html, body, div, span, applet, object, iframe,
@@ -88,10 +66,10 @@ body {
   background: rgb(215, 215, 215);
   background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
   background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-  background:  -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-  background:   -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-  background:    -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
-  background:     radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+  background: -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+  background: -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+  background: -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+  background: radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
 }
 
 /*
@@ -112,10 +90,10 @@ a {
   border-radius: 0.2em;
 
   -webkit-transition: 0.5s;
-  -moz-transition:  0.5s;
-  -ms-transition:   0.5s;
-  -o-transition:    0.5s;
-  transition:     0.5s;
+  -moz-transition:    0.5s;
+  -ms-transition:     0.5s;
+  -o-transition:      0.5s;
+  transition:         0.5s;
 }
 
 a:hover,
@@ -170,10 +148,10 @@ a:focus {
   margin: 20px auto;
 
   -webkit-box-sizing: border-box;
-  -moz-box-sizing:  border-box;
-  -ms-box-sizing:   border-box;
-  -o-box-sizing:    border-box;
-  box-sizing:     border-box;
+  -moz-box-sizing:    border-box;
+  -ms-box-sizing:     border-box;
+  -o-box-sizing:      border-box;
+  box-sizing:         border-box;
 
   font-family: 'PT Serif', georgia, serif;
   font-size: 48px;
@@ -190,10 +168,10 @@ a:focus {
   opacity: 0.3;
 
   -webkit-transition: opacity 1s;
-  -moz-transition:  opacity 1s;
-  -ms-transition:   opacity 1s;
-  -o-transition:    opacity 1s;
-  transition:     opacity 1s;
+  -moz-transition:    opacity 1s;
+  -ms-transition:     opacity 1s;
+  -o-transition:      opacity 1s;
+  transition:         opacity 1s;
 }
 
 .impress-enabled .step.active { opacity: 1 }
@@ -255,33 +233,33 @@ a:focus {
   text-align: center;
   padding: 50px;
   line-height: 1.25;
-}
 
-#title h1 {
-  font-size: 60px;
-}
+  h1 {
+    font-size: 60px;
+  } 
 
-#title h2 {
-  font-size: 40px;
-}
+  h2 {
+    font-size: 40px;
+  }
 
-#title .bottom {
-  padding-top: 300px;  
+  .bottom {
+    padding-top: 300px;  
+  }
 }
 
 #problem {
   padding: 0;
   padding: 50px;
   line-height: 1.25;
-}
 
-#problem h1 {
-  font-size: 60px;
-  text-align: center;
-}
+  h1 {
+    font-size: 60px;
+    text-align: center;
+  }
 
-#problem .middle {
-  padding-top: 100px;
+  .middle {
+    padding-top: 100px;
+  }
 }
 
 /*
