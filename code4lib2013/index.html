@@ -27,7 +27,10 @@
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
   <link href="css/hybrid.css" rel="stylesheet" />
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
   
   <link rel="shortcut icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -42,34 +45,115 @@
 
 <div id="impress">
 
-  <div id="title" class="step slide" data-x="-1000" data-y="-1500">
+  <div id="title" class="step slide" data-x="-3000" data-y="-1750">
     <h1>Hybrid Archival Collections Using Blacklight and Hydra</h1>
     <div class="bottom">
       <h2>Adam Wead</h2>
       <p>Rock and Roll Hall of Fame and Museum</p>
       <p>Library and Archives</p>
+      <p>Follow along at: <a href="https://github.com/awead/presentations">https://github.com/awead/presentations</a></p> 
     </div>    
   </div>
 
-  <div id="problem" class="step slide" data-x="0" data-y="-1500">
-    <h1>Problem</h1>
-    <div class="middle">
-      <p>How do you combine:</p>
-      <ol>
-        <li>Traditional library data</li>
-        <li>Descriptions of archival collections</li>
-        <li>Digital content and its metadata</li>
-      </ol>
-      <p>into the same discovery interface?</p>
-    </div>
-  </div>
-
-  <div id="view" class="step slide" data-x="1000" data-y="-1500">
-    And now the view from 30,000 feet ...
-  </div>
 
   <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
   </div>
+
+  <div class="step" data-x="3000" data-y="-1000" data-scale="5">
+    Build a discovery interface that encompasses library (MARC) data, archival collections (EAD)
+    as well as digital content and its associcated metadata (PBCore xml)
+  </div>
+
+  <div class="step" data-x="1500" data-y="1000" data-scale="3">
+    Use Solr as your index and retrieval engine, with Blacklight as your user interface
+  </div>
+
+  <div id="library" class="step" data-x="-500" data-y="-1500" data-scale="8" data-rotate="-45">
+    <h1>Library materials</h1>
+  </div>
+
+  <div id="marc" class="step standard-html" data-x="-500" data-y="-1500" data-scale="1" data-rotate="-45">
+    Straight-up Blacklight usage:
+    <ul>
+      <li>Build a rails app with the Blacklight gem</li>
+      <li>Get your marc records</li>
+      <li>Index records into solr</li>
+      <li>repeat above as needed</li>
+    </ul>
+  </div>
+
+  <div class="step" data-x="6000" data-y="-1500" data-scale="2">
+    OK, great, but what about ...
+  </div>
+
+  <div id="archives" class="step" data-x="9000" data-y="1000" data-scale="8" data-rotate="45">
+    <h1>Archival collections</h1>
+  </div>
+
+  <div class="step" data-x="9000" data-y="-500" data-scale="2" data-rotate="45">
+    <p>A marc record is (basically) one item<p>
+    <p>An EAD comprises multiple items, hierarchically arranged and described at different levels</p> 
+  </div>
+
+  <div class="step standard-html" data-x="10500" data-y="1000" data-scale="1" data-rotate="45">
+    <h1>The Solution<h1>
+    <p>Extend Blacklight to search and display finding aids</p>
+    <ul>
+      <li>Extract the item-level metdata from the collection</li>
+      <li>Searching yields single marc records, collection-level records, <strong>AND</strong> single items from within a collection</li>
+    </ul>
+  </div>
+
+  <div id="sample-collection" class="step standard-html" data-x="8000" data-y="1500" data-scale="2" data-rotate="45">
+    <i class="icon-large icon-suitcase"></i><a id="ead-toggle">Guide to the Jeff Gold Collection</a>
+    <div id="ead" class="ead orig">
+      <ul class="folder">
+        <li>Series I: Artist Files 
+          <ul>
+            <li>Beastie Boys</li>
+            <li>Dylan, Bob</li>
+          </ul>
+        </li>
+        <li>Audiovisual Materials
+          <ul class="folder">
+            <li>Audio
+              <ul>
+                <li>David Bowie</li>
+              </ul>
+            </li>
+            <li>Video
+              <ul>
+                <li>Van Halen</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="sample-search" class="step" data-x="10000" data-y="2500" data-scale="2" data-rotate="45">
+    <div id="search-form">
+      <h1>Welcome! Search our catalog...</h1>
+      <form class="form-search">
+        <input type="text" class="input-medium search-query" value="Bob Dylan"/>
+        <button id="sample-search-button" type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </div>
+    <div id="search-results" class="hidden">
+      Displaying items 1 - 4 of 547
+      <div><h3><img src="images/book.png"/> 1. Chronicles / Bob Dylan</h3></div>
+      <div><h3><img src="images/book.png"/> 2. Bob Dylan : forever young</h3></div>
+      <div><h3><img src="images/box.png"/> 3. Guide to the Jeff Gold Collection (ARC.0037)</h3></div>
+      <div><h3><img src="images/folder.png"/> 4. Series I: Artist Files >> Dylan, Bob </h3></div>
+    </div>
+  </div>
+
+  <div id="digital" class="step" data-x="4500" data-y="4000" data-scale="8">
+    <h1>Digital content</h1>
+  </div>
+
+
 
 </div>
 
@@ -83,6 +167,8 @@ if ("ontouchstart" in document.documentElement) {
 </script>
 
 <script src="js/impress.js"></script>
+<script src="js/jquery-1.9.0.min.js"></script>
+<script src="js/hybrid.js"></script>
 <script>impress().init();</script>
 
 </body>
