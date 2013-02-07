@@ -28,9 +28,7 @@
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
 
   <link href="css/bootstrap.min.css" rel="stylesheet" />
-  <link href="css/bootstrap.icon-large.min.css" rel="stylesheet">
   <link href="css/hybrid.css" rel="stylesheet" />
-  <!-- <link href="css/bootstrap.min.css" rel="stylesheet" /> -->
   
   <link rel="shortcut icon" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
@@ -64,8 +62,12 @@
     as well as digital content and its associcated metadata (PBCore xml)
   </div>
 
-  <div class="step" data-x="1500" data-y="1000" data-scale="3">
-    Use Solr as your index and retrieval engine, with Blacklight as your user interface
+  <div class="step" data-x="8000" data-y="1000" data-scale="10">
+    Solr
+  </div>
+
+  <div class="step" data-x="8000" data-y="1000" data-scale="5">
+    Blacklight
   </div>
 
   <div id="library" class="step" data-x="-500" data-y="-1500" data-scale="8" data-rotate="-45">
@@ -105,7 +107,7 @@
   </div>
 
   <div id="sample-collection" class="step standard-html" data-x="8000" data-y="1500" data-scale="2" data-rotate="45">
-    <i class="icon-large icon-suitcase"></i><a id="ead-toggle">Guide to the Jeff Gold Collection</a>
+    <img source="images/box.png"/><a id="ead-toggle">Guide to the Jeff Gold Collection</a>
     <div id="ead" class="ead orig">
       <ul class="folder">
         <li>Series I: Artist Files 
@@ -149,10 +151,61 @@
     </div>
   </div>
 
+  <div id="fa" class="step standard-html" data-x="11750" data-y="4250" data-scale="2" data-rotate="45">
+    <h1>Guide to the Jeff Gold Collection</h1>
+    <h2>Abstract</h2>
+    <p>Sample finding aid displayed with Blacklight
+    <h2>Collection Inventory</h2>
+    <div class="c01">
+      <h5>
+        <i id="show-ref1" class="icon-chevron-right"></i>
+        <i id="hide-ref1" class="icon-chevron-down hidden"></i>
+        Series I: Artist Files
+      <h5>
+      <div id="ref1" class="c02 hidden">
+        <h5>Beastie Boys</h5>
+        <h5>Dylan, Bob</h5>
+      </div>
+    </div>
+    <div class="c01">
+      <h5>
+        <i id="show-ref2" class="icon-chevron-right"></i>
+        <i id="hide-ref2" class="icon-chevron-down hidden"></i>
+        Audiovisual Materials
+      </h5>
+      <div id="ref2" class="c02 hidden">
+        <h5>
+          <i id="show-ref3" class="icon-chevron-right"></i>
+          <i id="hide-ref3" class="icon-chevron-down hidden"></i>  
+          Audio
+        </h5>
+        <div id="ref3" class="c03 hidden">
+          <h5>David Bowie</h5>
+        </div>
+        <h5>
+          <i id="show-ref4" class="icon-chevron-right"></i>
+          <i id="hide-ref4" class="icon-chevron-down hidden"></i>
+          Video
+        </h5>
+        <div id="ref4" class="c03 hidden">
+          <h5>Van Halen</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
   <div id="digital" class="step" data-x="4500" data-y="4000" data-scale="8">
     <h1>Digital content</h1>
   </div>
 
+  <!--
+    
+    
+
+
+  -->
 
 
 </div>

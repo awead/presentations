@@ -14,8 +14,16 @@ $(document).ready(function() {
 });
 
 $(document).on("click", ".alt", altToggle);  
-$(document).on("click", "#sample-search-button", searchResults);  
-
+$(document).on("click", "#sample-search-button", searchResults);
+$(document).on("click", "fa-inventory", showFirst);
+$(document).on("click", "#show-ref1", toggleFirst);
+$(document).on("click", "#hide-ref1", toggleFirst);
+$(document).on("click", "#show-ref2", toggleSecond);
+$(document).on("click", "#hide-ref2", toggleSecond);
+$(document).on("click", "#show-ref3", toggleThird);
+$(document).on("click", "#hide-ref3", toggleThird);
+$(document).on("click", "#show-ref4", toggleFourth);
+$(document).on("click", "#hide-ref4", toggleFourth);
 
 
 
@@ -48,3 +56,34 @@ function altToggle() {
 function searchResults() {
   $("#search-results").toggleClass("hidden")
 }
+
+function showFirst () {
+  var content = "<h3>Series I: Artist Files</h3><h3>Audiovisual Materials</h3>"
+}
+
+function toggleFirst () {
+  $("div#ref1").toggleClass("hidden");
+  $("i#hide-ref1").toggleClass("hidden");
+  $("i#show-ref1").toggleClass("hidden");
+}
+
+function toggleSecond () {
+  $("div#ref2").toggleClass("hidden");
+  $("i#hide-ref2").toggleClass("hidden");
+  $("i#show-ref2").toggleClass("hidden");
+}
+
+function toggleThird () {
+  $("div#ref3").toggleClass("hidden");
+  $("i#hide-ref3").toggleClass("hidden");
+  $("i#show-ref3").toggleClass("hidden");
+}
+
+function toggleFourth () {
+  $("div#ref4").toggleClass("hidden");
+  $("i#hide-ref4").toggleClass("hidden");
+  $("i#show-ref4").toggleClass("hidden");
+}
+
+
+

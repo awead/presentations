@@ -317,6 +317,35 @@ ul.folder {
 
 }
 
+#fa {
+
+  background-color: #FFF;
+
+  h5 { margin: 0px; }
+
+  div {
+    padding: 3px;
+    margin: 2px 0;
+    &.c01 {
+      margin: 2px 2px 2px 20px;
+      background-color: #CCC; }
+    &.c02 {
+      margin: 2px 2px 2px 60px;
+      background-color: #DDD; }
+    &.c03 {
+      margin: 0 0 0 60px;
+      background-color: #EEE; }
+    &.c04 {
+      margin: 0 0 0 20px;
+      background-color: #FFF; }
+    &.c05 {
+      margin: 0 0 0 20px;
+      border: 1px solid #CCC;
+    }
+  }
+
+}
+
 /*
   The last step is an overview.
   There is no content in it, so we make sure it's not visible because we want
