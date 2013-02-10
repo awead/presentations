@@ -144,7 +144,7 @@ a:focus {
 
 .step {
   position: relative;
-  width: 1100px;
+  width: 900px;
   padding: 40px;
   margin: 20px auto;
 
@@ -223,6 +223,10 @@ a:focus {
 
 .standard-html {
 
+  h1 {
+    font-size: 60px;
+  }
+
   ul {
     list-style-type: square;
 
@@ -230,6 +234,8 @@ a:focus {
       margin-left: 50px;
     }
   }
+
+  width: 1300px;
 
 }
 
@@ -252,12 +258,21 @@ a:focus {
 
 }
 
-ul.folder {
-  list-style-image: url('../img/folder.png');
+td {
+  &.center {
+    text-align: center;
+  }
+  &.left {
+    text-align: left;
+  }
+  &.right {
+    text-align: right;
+  }
 }
 
-.box {
 
+ul.folder {
+  list-style-image: url('../img/folder.png');
 }
 
 
@@ -273,10 +288,14 @@ ul.folder {
 */
 
 #title {
-  padding: 0;
   text-align: center;
-  padding: 50px;
   line-height: 1.25;
+
+  .logo {
+    padding: 25px;
+    height: 350px;
+    width:  350px;
+  }
 
   h1 {
     font-size: 60px;
@@ -286,8 +305,39 @@ ul.folder {
     font-size: 40px;
   }
 
-  .bottom {
-    padding-top: 300px;  
+  a:link {
+    text-decoration: none;
+    text-shadow: none;
+  }
+}
+
+#solr {
+  font-size: 200px;
+  padding-left: 250px;
+}
+
+#blacklight {
+  font-size: 75px;
+  padding-left: 250px;
+}
+
+#library, #archives, #digital {
+  font-size: 75px;
+}
+
+#archives-ratio {
+  font-size: 60px;
+  td {
+    width: 175px;
+  }
+}
+
+
+#sample-collection{
+  a {
+    font-size: 60px;
+    text-decoration: none;
+    text-shadow: none;
   }
 }
 
@@ -335,13 +385,11 @@ ul.folder {
     margin: 0px;
 
     i {
-
       margin-top: 20px;
-
     }
   }
 
-  p{
+  p {
     font-size: 30px;
     margin-left: 20px;
   }
@@ -367,6 +415,28 @@ ul.folder {
     }
   }
 
+}
+
+#digital {
+  padding: 200px 0px 0px 150px;
+}
+
+#hydra {
+  font-size: 75px;
+  padding-left: 320px;
+}
+
+#fedora {
+  font-size: 75px;
+  padding-left: 300px;
+}
+
+#hydra-features{
+  width: 1100px;
+}
+
+#model-text {
+  width: 1200px;
 }
 
 /*

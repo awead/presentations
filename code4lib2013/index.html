@@ -45,67 +45,60 @@
 
   <div id="title" class="step slide" data-x="-3000" data-y="-1750">
     <h1>Hybrid Archival Collections Using Blacklight and Hydra</h1>
-    <div class="bottom">
-      <h2>Adam Wead</h2>
-      <img src="img/logo.png"/>
-      <p>Follow along at: <a href="https://github.com/awead/presentations">https://github.com/awead/presentations</a></p> 
-    </div>    
+      <img class="logo" src="img/logo.png"/>
+      <h2>Adam Wead</h2>      
+      <p><a href="https://github.com/awead/presentations">https://github.com/awead/presentations</a></p> 
   </div>
 
 
   <div id="overview" class="step" data-x="3000" data-y="1500" data-scale="10">
   </div>
 
+  <!--
   <div class="step" data-x="3000" data-y="-1000" data-scale="5">
     Build a discovery interface that encompasses library (MARC) data, archival collections (EAD)
     as well as digital content and its associcated metadata (PBCore xml)
   </div>
+  -->
 
-  <div class="step" data-x="8000" data-y="1000" data-scale="10">
+  <div id="solr" class="step" data-x="3000" data-y="1500" data-scale="10">
     Solr
   </div>
 
-  <div class="step" data-x="8000" data-y="1000" data-scale="5">
+  <div id="blacklight" class="step" data-x="3000" data-y="-500" data-scale="8">
     Blacklight
   </div>
 
-  <div id="library" class="step" data-x="-500" data-y="-1500" data-scale="8" data-rotate="-45">
+  <div id="library" class="step" data-x="-500" data-y="-500" data-scale="5" data-rotate="-45">
     <h1>Library materials</h1>
   </div>
 
-  <div id="marc" class="step standard-html" data-x="-500" data-y="-1500" data-scale="1" data-rotate="-45">
-    Straight-up Blacklight usage:
-    <ul>
-      <li>Build a rails app with the Blacklight gem</li>
-      <li>Get your marc records</li>
-      <li>Index records into solr</li>
-      <li>repeat above as needed</li>
-    </ul>
-  </div>
-
-  <div class="step" data-x="6000" data-y="-1500" data-scale="2">
-    OK, great, but what about ...
-  </div>
-
-  <div id="archives" class="step" data-x="9000" data-y="1000" data-scale="8" data-rotate="45">
+  <div id="archives" class="step" data-x="7000" data-y="500" data-scale="5" data-rotate="45">
     <h1>Archival collections</h1>
   </div>
 
-  <div class="step" data-x="9000" data-y="-500" data-scale="2" data-rotate="45">
-    <p>A marc record is (basically) one item<p>
-    <p>An EAD comprises multiple items, hierarchically arranged and described at different levels</p> 
+  <div id="archives-ratio" class="step" data-x="7500" data-y="-100" data-scale="3" data-rotate="45">
+    <table>
+      <tr><td class="left">MARC:Item</td><td class="center">&nbsp;::&nbsp;</td><td class="right">1:1</td></tr>
+      <tr><td class="left">EAD:Item</td><td class="center">&nbsp;::&nbsp;</td><td class="right">1:N</td></tr>
+    </table>
   </div>
 
-  <div class="step standard-html" data-x="10500" data-y="1000" data-scale="1" data-rotate="45">
-    <h1>The Solution<h1>
-    <p>Extend Blacklight to search and display finding aids</p>
+  <div class="step standard-html" data-x="5500" data-y="0" data-scale="1" data-rotate="45">
+    <h1>Extend Blacklight to search EAD</h1>
     <ul>
-      <li>Extract the item-level metdata from the collection</li>
-      <li>Searching yields single marc records, collection-level records, <strong>AND</strong> single items from within a collection</li>
+      <li>Index collections and single items from a collection</li>
+      <li>Search results yield:
+        <ul>
+          <li>bibligraphic items (marc records)</li>
+          <li>collections (single EAD)</li>
+          <li>items within collections (parts of EAD)</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
-  <div id="sample-collection" class="step standard-html" data-x="8000" data-y="1500" data-scale="2" data-rotate="45">
+  <div id="sample-collection" class="step standard-html" data-x="6500" data-y="1000" data-scale="1" data-rotate="45">
     <img source="img/box.png"/><a id="ead-toggle">Guide to the Jeff Gold Collection</a>
     <div id="ead" class="ead orig">
       <ul class="folder">
@@ -133,7 +126,7 @@
     </div>
   </div>
 
-  <div id="sample-search" class="step" data-x="10000" data-y="2500" data-scale="2" data-rotate="45">
+  <div id="sample-search" class="step" data-x="7500" data-y="2000" data-scale="1" data-rotate="45">
     <div id="search-form">
       <h1>Welcome! Search our catalog...</h1>
       <form class="form-search">
@@ -150,7 +143,7 @@
     </div>
   </div>
 
-  <div id="fa" class="step standard-html" data-x="11750" data-y="4250" data-scale="2" data-rotate="45">
+  <div id="fa" class="step standard-html" data-x="8500" data-y="3000" data-scale="1" data-rotate="45">
     <h1>Guide to the Jeff Gold Collection</h1>
     <h2>Abstract</h2>
     <p>Sample finding aid displayed with Blacklight
@@ -193,20 +186,52 @@
     </div>
   </div>
 
-  <div id="hydra-lead-in" class="step standard-html" data-x="10250" data-y="5750" data-scale="2" data-rotate="45">
-    I thought this presentation was going to be about Hydra?
-  </div>
-
-  <div id="digital" class="step" data-x="4500" data-y="4000" data-scale="8">
+  <div id="digital" class="step" data-x="3000" data-y="4400" data-scale="5">
     <h1>Digital content</h1>
   </div>
 
-  <!--
-    
-    
+  <div id="fedora" class="step" data-x="3000" data-y="3750" data-scale="4">
+    Fedora
+  </div>
 
+  <div id="hydra" class="step" data-x="3000" data-y="3000" data-scale="8">
+    Hydra
+  </div>
 
-  -->
+  <div id="hydra-features" class="step" data-x="3000" data-y="3000" data-scale="2">
+    <ol>
+      <li>Defines Fedora objects using Ruby</li>
+      <li>Manages RDF relationships among them</li>
+      <li>Indexes metadata into Solr</li>
+    </ol>
+  </div>
+
+  <div id="model" class="step" data-x="4500" data-y="3000" data-scale="1">
+    <h1>Video Content in Fedora</h1>
+    <img src="img/video_model.png"/>
+  </div>
+
+  <div id="model-text-1" class="step standard-html" data-x="6000" data-y="3000" data-scale="1">
+    <h1>Link content in Fedora to archival collections</h1>
+    <ul>
+      <li>Digitized content originates from sources in a collection</li>
+      <li>Born-digital content is part of a series in a collection</li>
+      <li>All collections and series/subseries exist in Solr via Blacklight</li>
+    </ul>
+  </div>
+
+  <div id="model-text-2" class="step standard-html" data-x="3000" data-y="3000" data-scale="1">
+    <h1>Create RDF representations of collections</h1>
+    <ul>
+      <li>Hydra <em>in reverse</em> -- query Solr for all collections and series/subseries</li>
+      <li>Link the objects together as they are in the collection</li>
+      <li>Use Hydra to create additional RDF linkages to series and collections</li>
+    </ul>
+  </div>
+
+  <div id="full-model" class="step" data-x="4500" data-y="3750" data-scale="1">
+    <img src="img/full_model.png"/>
+  </div>
 
 
 </div>
