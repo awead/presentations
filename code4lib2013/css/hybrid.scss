@@ -235,6 +235,13 @@ a:focus {
     }
   }
 
+  ol {
+    list-style-type: decimal;
+    li {
+      margin-left: 50px;
+    }
+  }
+
   width: 1300px;
 
 }
