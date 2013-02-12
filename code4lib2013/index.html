@@ -182,6 +182,9 @@
         <div id="ref4" class="c03 hidden">
           <h5>Van Halen (Box: AV4, Cassette: 5-13)</h5>
         </div>
+        <h5 class="empty">
+          Subseries 3: Digital
+        </h5>
       </div>
     </div>
   </div>
@@ -212,20 +215,21 @@
   </div>
 
   <div id="model-text-1" class="step standard-html" data-x="1750" data-y="4250" data-scale="1">
-    <h1>Link content in Fedora to archival collections</h1>
+    <h1>Relate Fedora content to its archival collection</h1>
     <ul>
       <li>Digitized content originates from sources in a collection</li>
       <li>Born-digital content is part of a series in a collection</li>
-      <li>All collections and series/subseries exist in Solr via Blacklight</li>
+      <li>Collection metadtata already exists in Solr</li>
     </ul>
   </div>
 
   <div id="model-text-2" class="step standard-html" data-x="250" data-y="4250" data-scale="1">
     <h1>Create RDF representations of collections</h1>
     <ul>
-      <li>Hydra <em>in reverse</em> -- query Solr for all collections and series/subseries</li>
-      <li>Link the objects together as they are in the collection</li>
-      <li>Use Hydra to create additional RDF linkages to series and collections</li>
+      <li>Hydra <em>in reverse</em> -- query Solr for all collection metadata</li>
+      <li>Create objects for each collection, series and subseries</li>
+      <li>Tie everything together with RDF</li>
+      <li>Re-export to our Blacklight Solr index</li>
     </ul>
   </div>
 
@@ -233,6 +237,74 @@
     <img src="img/full_model.png"/>
   </div>
 
+  <div id="fa-digital" class="step standard-html" data-x="-1500" data-y="5000" data-scale="1">
+    <h1>Guide to the Jeff Gold Collection</h1>
+    <h2>Abstract</h2>
+    <p>Sample finding aid displayed with Blacklight
+    <h2>Collection Inventory</h2>
+    <div class="c01">
+      <h5>
+        <i id="show-ref1" class="icon-chevron-right"></i>
+        <i id="hide-ref1" class="icon-chevron-down hidden"></i>
+        Series I: Artist Files
+      <h5>
+      <div id="ref1" class="c02 hidden">
+        <h5>Aerosmith (Box: AF1, Folder: 1)</h5>
+        <h5>Dylan, Bob (Box: AF6, Folder: 25)</h5>
+      </div>
+    </div>
+    <div class="c01">
+      <h5>
+        <i id="show-ref2" class="icon-chevron-right"></i>
+        <i id="hide-ref2" class="icon-chevron-down hidden"></i>
+        Series VII: Audiovisual Materials 
+      </h5>
+      <div id="ref2" class="c02 hidden">
+        <h5>
+          <i id="show-ref3" class="icon-chevron-right"></i>
+          <i id="hide-ref3" class="icon-chevron-down hidden"></i>  
+          Subseries 1: Audio
+        </h5>
+        <div id="ref3" class="c03 hidden">
+          <h5>Bowie, David (Box: AV5, Reel: 1)</h5>
+        </div>
+        <h5>
+          <i id="show-ref4" class="icon-chevron-right"></i>
+          <i id="hide-ref4" class="icon-chevron-down hidden"></i>
+          Subseries 2: Video
+        </h5>
+        <div id="ref4" class="c03 hidden">
+          <h5>Van Halen (Box: AV4, Cassette: 5-13)</h5>
+          <h5>Van Halen (Digital)</h5>
+        </div>
+        <h5>
+          <i id="show-ref5" class="icon-chevron-right"></i>
+          <i id="hide-ref5" class="icon-chevron-down hidden"></i>
+          Subseries 3: Digital
+        </h5>
+        <div id="ref5" class="c03 hidden">
+          <h5>[born-digital materials]</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="status" class="step standard-html" data-x="-2750" data-y="4000" data-scale="1">
+    <h1>Issues</h1>
+    <ul>
+      <li>Terrible solr performance for series, c. 500+ items</li>
+      <li>No EAD "round tripping"</li>
+      <li>Currently 60% complete</li>
+    </ul>
+  </div>
+
+  <div id="finish" class="step slide" data-x="-3000" data-y="-750">
+    <h1>Thank you</h1>
+    <img class="logo" src="img/logo.png"/>
+    <h2>Adam Wead</h2>      
+    <p>awead@rockhall.org</p>
+    <p><img src="img/twitter.png" class="twit" />@amsterdamos</p>       
+  </div>
 
 </div>
 

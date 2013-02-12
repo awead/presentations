@@ -24,6 +24,8 @@ $(document).on("click", "#show-ref3", toggleThird);
 $(document).on("click", "#hide-ref3", toggleThird);
 $(document).on("click", "#show-ref4", toggleFourth);
 $(document).on("click", "#hide-ref4", toggleFourth);
+$(document).on("click", "#show-ref5", toggleFifth);
+$(document).on("click", "#hide-ref5", toggleFifth);
 
 
 
@@ -83,6 +85,12 @@ function toggleFourth () {
   $("div#ref4").toggleClass("hidden");
   $("i#hide-ref4").toggleClass("hidden");
   $("i#show-ref4").toggleClass("hidden");
+}
+
+function toggleFifth () {
+  $("div#ref5").toggleClass("hidden");
+  $("i#hide-ref5").toggleClass("hidden");
+  $("i#show-ref5").toggleClass("hidden");
 }
 
 
