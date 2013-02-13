@@ -245,18 +245,18 @@ ul.folder {
   First is the title step with a big <h1> (no room for padding) and some
   3D positioning along Z axis.
 */
-#title, #finish {
+#title, #finish, #credits {
   text-align: center;
   line-height: 1.25; }
-  #title .logo, #finish .logo {
+  #title .logo, #finish .logo, #credits .logo {
     padding: 25px;
     height: 350px;
     width: 350px; }
-  #title h1, #finish h1 {
+  #title h1, #finish h1, #credits h1 {
     font-size: 60px; }
-  #title h2, #finish h2 {
+  #title h2, #finish h2, #credits h2 {
     font-size: 40px; }
-  #title a:link, #finish a:link {
+  #title a:link, #finish a:link, #credits a:link {
     text-decoration: none;
     text-shadow: none; }
 
