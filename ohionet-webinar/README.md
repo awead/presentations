@@ -31,38 +31,38 @@ Three parts, 20 minutes...
 * asset manager's may use collections or groups of items, but these do no always correspond to the achival notion of a collection or series
 
 ##### Current landscape of asset management solutions
- * Proprietary
- . ContentDM (Innovative)
- . Rosetta (ExLibris)
- . Canto (favors text documents for businesses)
- . Piction (favors images for business, gov. and museums)
- . and many, many more
- . either built around existing ILS or focus on specific content-type
+  * Proprietary
+    - ContentDM (Innovative)
+    - Rosetta (ExLibris)
+    - Canto (favors text documents for businesses)
+    - Piction (favors images for business, gov. and museums)
+    - and many, many more
+    - either built around existing ILS or focus on specific content-type
       
-      - Opensoure (often using Fedora)
-        . DSpace
-        . Islandora
-        . RODA (http://roda-community.org/)
-        . many others ...
-        . make assumptions about your content: modeling, type, metadata
+  * Opensoure (often using Fedora)
+    _ DSpace
+    _ Islandora
+    _ RODA (http://roda-community.org/)
+    _ many others ...
+    _ make assumptions about your content: modeling, type, metadata
 
-    * What's good about Hydra
-      - makes no assumptions about your data
-        . can model anything
-        . using any metadata standard
-        . using any content
-        . stored anywhere
-        . accessed by anyone or no one
-        . presented as anything (using HTML and Javascript)
-      - underlying technologies are abstracted (Fedora and Solr)
+##### What's good about Hydra
+  * makes no assumptions about your data
+  * can model anything
+  * using any metadata standard
+  * using any content
+  * stored anywhere
+  * accessed by anyone or no one
+  * presented as anything (using HTML and Javascript)
+  * underlying technologies are abstracted (Fedora and Solr)
 
-    * What's not-so-good about Hydra
-      - technologically daunting
-      - deep "stack" of technologies
-      - requires in-house expertise/ability/willingness
-      - not a turnkey solution (yet...)
-      - no Hydra hosting options
-        . you're required to provide your own hardware, but you can use hosted solutions for that
+##### What's not-so-good about Hydra
+  * technologically daunting
+  * deep "stack" of technologies
+  * requires in-house expertise/ability/willingness
+  * not a turnkey solution (yet...)
+  * no Hydra hosting options
+    - you're required to provide your own hardware, but you can use hosted solutions for that
 
 
   Part 2: Technology backstories
