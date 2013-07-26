@@ -14,11 +14,34 @@ Rock and Roll Hall of Fame + Museum Library and Archives. Adam Wead, Systems and
 for the Museum, will take us through the process he used to build the head, compare Hydra to other repository 
 solutions, talk about modeling content, and discuss some of the requirements for adoption—all in just one hour
   
+### Introduction
+
+#### Hello, my name is
+  * Adam Wead, Systems and Digital Collections Librarian at the Rock and Roll Hall of Fame and Museum
+  * Hydra webinar in three parts:
+    + Background: Digital asset managers and archiving
+    + Technical Geekery: Hydra's technical components and what they're all about
+    + Building a Hydra Head: Starting down the path to building your own head
+
+#### Hydra at the Rockhall
+  * We've been using Hydra for about 2 years now
+  * Only video at the moment
+    + 1650+ videos
+    + 175 TB of data, mostly uncompressed video files stored on LTO tape, and not hard disk
+    + PBCore metdata schema
+    + compressed H264 files for streaming
+    + records get exported to a discovery interface
+  * Hydra works for us because it can satisfy all these needs in a way that other asset managers could not
+
 ### Part 1: Conceptual Background
 
 ##### What is Hydra?
+  * Conceptual level:
+    Community of software developers, end users, adopters and institutions focused on the managemement of digital content
 
 ##### Current Hydra adopters and their solutions
+  * Current partners
+  * 
 
 ##### What's in an asset manager?
   * identifies content types: images, audio, text, pdf, video, etc.
@@ -53,10 +76,20 @@ solutions, talk about modeling content, and discuss some of the requirements for
     + Islandora
     + RODA (http://roda+community.org/)
     + many others ...
-    + make assumptions about your content: modeling, type, metadata
+
+##### Asset Management Pitfalls
+  * make assumptions about your content
+    + modeling: organization of content, collections, rights management
+    + type: A/V formats, file formats, data
+    + metadata: Dublin Core, EAD, MARC, various xml schemas (PBCore, VRA, MODS)
+  * your local implementation is limited to the constraints imposed by these assumptions
+  * costs
+    + money
+    + technological resources
+    + human resources
 
 ##### What's good about Hydra
-  * makes no assumptions about your data
+  * makes no assumptions about your data (well, actually one assumption)
   * can model anything
   * using any metadata standard
   * using any content
@@ -64,21 +97,60 @@ solutions, talk about modeling content, and discuss some of the requirements for
   * accessed by anyone or no one
   * presented as anything (using HTML and Javascript)
   * underlying technologies are abstracted (Fedora and Solr)
+  * it's "free" and open-source
 
 ##### What's not-so-good about Hydra
-  * technologically daunting
+  * technologically daunting -- you're going to be overwhelmed. that's okay.
   * deep "stack" of technologies
-  * requires in+house expertise/ability/willingness
+  * tied to the Ruby-on-Rails framwork
+  * favors a Unix environment
+  * requires in-house expertise/ability/willingness
   * not a turnkey solution (yet...)
   * no Hydra hosting options
     + you're required to provide your own hardware, but you can use hosted solutions for that
 
+##### Why should I use it?
+  * Decide for yourself...
+  * Everything has costs
+  * Proprietary solutions still required technical expertise and modifications
+    + vendor may limit your ability to customize
+  * Open source solutions may require extensive modifications to meet your needs
+  * Avoiding "reinventing the wheel"
+  * Can draw on a shared community of adopters and partners, each with their own technological resources
+
 ### Part 2: Technology backstories
 
+##### What is Hydra, technically?
+  * A Ruby on Rails application
+  * Built using the Blacklight and the Hydra gem
+  * Fedora repository for creating and describing content
+  * Solr for searching
+  * Various other "Rails-isms" for additional features
+    + User accounts
+    + Authentication and authorization
+    + MySQL database or other RDMS
+    + JQuery javascript library for building an interface
+
+##### A Brief History of Web Applications
+  * content displayed in HTML, dynaically rendered
+  * choose your own backend (i.e. a relational database)
+    + Oracle
+    + Microsoft SQL
+    + MySQL
+    + PostgreSQL
+  * choose a software platform for for getting the backend out to the frontend
+    + Perl/CGI
+    + PHP
+    + Microsoft ASP
+    + Coldfusion
+    + Java JSP
+  * write your code and hope you never have to change
+  * frontend solution is tied to the backend solution
+
 ##### Rails
-  * short history of web apps
-  * MVC framwork
-  * convention versus configuration
+  * Says: I don't care about any of that, just let me write a web application quickly
+  * convention over configuration
+  * data is modeled abstractly and it not tied to one particular database
   * enabling fast development
 
 ##### Fedora
