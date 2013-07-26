@@ -38,31 +38,45 @@ solutions, talk about modeling content, and discuss some of the requirements for
 ##### What is Hydra?
   * Conceptual level:
     Community of software developers, end users, adopters and institutions focused on the managemement of digital content
+  * Philosophy:
+    If you want to go fast, go alone; if you want to go far, go together
+  * Everyone is facing the same challenges with digital content, why no pool collective resources and build a solution
+    that can leverage the work of other institutations and individuals who are meeting these shared challenges.
 
 ##### Current Hydra adopters and their solutions
   * Current partners
   * 
 
-##### What's in an asset manager?
-  * identifies content types: images, audio, text, pdf, video, etc.
-  * description: metadata
-  * storage and preservation
-  * lifecycle, helping you identify things that need to be deleted, kept or migrated to newer digital formats
-  * workflows for ingesting new content
-    + required descriptive fields
+##### Challenges with digital media
+  * a digital asset manager needs to do just that: manage our digital content that we want to ensure will be
+    available in the comming years
+  * what are the challenges that we'll face when doing that?
+    + identifying content types: images, audio, text, pdf, video, etc.
+    + description, i.e. metadata
+    + storage and preservation
+    + lifecycle: identify things that need to be deleted, kept or migrated to newer digital formats
     + format conversions such as creating derivative files
-  * searching, updating, viewing your content 
-  * controlling access
+    + workflows for ingesting new content correctly, i.e. required information, supported formats
+    + searching, updating, viewing your content 
+    + controlling access
 
-##### Asset management versus archiving
+##### Archiving or just "managing" ?
   * archiving implies another set of features in addition to basic digital asset management features
   * heirarchichal organziation
   * accessioning of content
   * presentation of multiple items as a coherent unit, i.e. collections
-  * an asset manager is usually item+level driven; archival information is collection driven
-  * asset manager's may use collections or groups of items, but these do no always correspond to the achival notion of a collection or series
+  * an asset manager is generally item-level driven; archival information is collection-level driven
+  * asset managers may use collections or groups of items, but these do no always correspond to what a
+    collection means to an achivist or a collection withing an existing archives
 
-##### Current landscape of asset management solutions
+##### What's out there now?
+  * solutions exist today to address most of these problems
+  * they aren't designed to work in concert with one another
+  * they often aren't targeted towards librares or archives
+  * solutions become a "stack" or combination of tools and procecudes grouped into a collective
+    process that attempts to solve the asset management problem
+
+##### Current landscape of asset management products
   * Proprietary
     + ContentDM (Innovative)
     + Rosetta (ExLibris)
@@ -112,11 +126,19 @@ solutions, talk about modeling content, and discuss some of the requirements for
 ##### Why should I use it?
   * Decide for yourself...
   * Everything has costs
-  * Proprietary solutions still required technical expertise and modifications
+  * Every solution will require some technical expertise as well as some "jury rigging"
+    + spending time getting the system running
+    + learning
+    + integrating with exsting systems: ILS, archival data, your databasases, your server systems and storage
+  * Proprietary solutions don't work "out of the box" either
     + vendor may limit your ability to customize
-  * Open source solutions may require extensive modifications to meet your needs
-  * Avoiding "reinventing the wheel"
+  * Any open source solution will require modifications to meet your needs
+    + open source products make assumptions about your content to reduce the amount of customization but there's the
+      tradeoff of less operability
+  * Avoiding "reinventing the wheel" - Hydra includes basic functionality at its core enabling the user to
+    get started relatively quickly with a rich set of features
   * Can draw on a shared community of adopters and partners, each with their own technological resources
+    + borrow and use other people's work and add it to your hydra head
 
 ### Part 2: Technology backstories
 
