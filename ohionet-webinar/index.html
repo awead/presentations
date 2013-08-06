@@ -4,10 +4,10 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>One of the Many Heads of Hydra--at the Rock and Roll Hall of Fame</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Webinar on Hydra sponsored by OhioNET">
+		<meta name="author" content="Adam Wead">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -36,6 +36,327 @@
 
 			<div class="slides">
 
+				<section>
+					<h1>One of the Many Heads of Hydra</h1>
+					<h2>at the Rock and Roll Hall of Fame</h2>
+					<h3>Adam Wead</h3>
+					<h5>Systems and Digital Collections Librarian</h5>
+					<h3>Sponsored by</h3>
+					<h3><a href="http://www.ohionet.org/">OhioNET</a></h3>
+				</section>
+
+				<!-- introduction -->
+				<section>
+					<section>
+						<h1>Introduction</h1>
+						<img src="img/hello.png" />
+					</section>
+					<section>
+						<h2>Hydra webinar in three parts</h2>
+    				<ol>	
+    				  <li>Background: Using Hydra as a digital asset manager</li>
+    				  <li>Technical Geekery: Hydra's technical components and what they're all about</li>
+    				  <li>Building a Hydra Head: Starting down the path to building your own head</li>
+    				</ol>
+    				<p>There will a question and answer period after each part to help break-up the format</p>
+					</section>
+					<section>
+		 				<h2>Hydra at the Rockhall</h2>
+		 				<p>Hydra satisfies all our needs in ways that other asset managers could not</p>
+  					<ul>
+  						<li>2010: Began R+D for an asset manager</li>
+  						<li>2011: went into production</li>
+  						<li>Only video at the moment:
+  						<li>1650+ videos of institutional content, incl. induction ceremonies and performance series</li>
+  						<li>175 TB of data: 95% uncompressed video files stored on LTO tape, and not hard disk</li>
+  						<li>PBCore metdata schema</li>
+  						<li>compressed H264 files for streaming</li>
+  						<li>records get exported to a discovery interface</li>
+  					</ul>
+  					<aside class="notes">
+  						Everyone's needs are different, so solutions vary.  What works for us may not work for you, but you have the option
+  						of sharing/borrowing from others. 
+						</aside>
+					</section>
+				</section>
+
+				<!-- part one -->
+				<section>
+					<h2>Part 1: Conceptual Background</h2>
+					<h4>The what's and who's of Hydra and asset managers in general</h4>
+					<aside class="notes">
+						I'll be talking about what Hydra is in the non-technical sense, who's currently using, what's it designed to
+						do and how that compares with other asset managers
+					</aside>
+				</section>
+
+				<section>
+					<h2>What is Hydra?</h2>
+  				<h3>Conceptual level</h4>
+  				<p>Community of software developers, end users, adopters and institutions</p>
+  				<p>Collaboratively built solution bundles, or "heads," that can be adapted to suite local needs</p>
+  				<blockquote>One body, many heads</blockquote>
+  				<h3>Philosophy</h4>
+  				<blockquote>If you want to go fast, go alone; if you want to go far, go together</blockquote>
+  				<p>
+  				 	Everyone is facing the same challenges with digital content.  Why not pool collective resources and build a solution
+  				  that can leverage the work of other institutions and individuals who are meeting these shared challenges.
+  				</p>
+  			</section>
+
+  			<section>
+					<h2>Hydra Fundamental Assumption</h2>
+					<blockquote>No single institution can resource the development of a full range of solutions on its own</blockquote>
+				</section>
+
+        <section>
+        	<h2>Current Hydra Partners</h2>
+        	<ul>
+            <li>Stanford University</li>
+            <li>DuraSpace</li>
+            <li>Northwestern University</li>
+            <li>Indiana University</li>
+            <li>The Royal Library of Denmark</li>
+            <li>Boston Public Library</li>
+            <li>Virginia Tech</li>
+            <li>University of Hull</li>
+            <li>MediaShelf</li>
+            <li>Columbia University</li>
+            <li>London School of Economics</li>
+            <li>Data Curation Experts</li>
+            <li>Duke University</li>
+            <li>University of Virginia</li>
+            <li>University of Notre Dame</li>
+            <li>Penn State University</li>
+            <li>Rock and Roll Hall of Fame</li>
+            <li>WGBH</li>
+            <li>Yale University</li>
+          </ul>
+        </section>
+
+        <section>
+        	<h2>Hydra Adopters</h2>
+        	<ul>
+	      		<li>Spoken Word Services (Glasgow Caledonian University)</li>
+	      		<li>University College Dublin</li>
+	      		<li>University of Illinois at Urbana-Champaign</li>
+	      		<li>The Digital Repository of Ireland</li>
+	      		<li>Museum of the Performing Arts (MAE) of the Theatre Institute of Barcelona</li>			
+	      		<li>Johns Hopkins University</li>
+	      		<li>Tufts University</li>
+	      	</ul>
+        </section>
+
+        <section>
+        	<h2>Scope of Current Solutions</h2>
+        	<ul>
+          	<li>image collections</li>
+          	<li>media content</li>
+          	<li>archicval collection presentation</li>
+          	<li>institutional repositories</li>
+          	<li>electronic theses and dissertations</li>
+        	</ul>
+        	<p>Visit <a href="http://projecthydra.org/">http://projecthydra.org/</a></p>
+          <ul>
+          	<li>includes links to their Hydra-based websites</li>
+          	<li>screencasts</li>
+          </ul>
+	      </section>
+
+	      <section>
+	      	<h2>Challenges with digital media</h2>
+        	<aside class="notes">
+        		A digital asset should manage your digital content and ensure it will be
+        		available in the comming years.
+        	</aside>
+        	<ul>
+            <li>identifying content types: images, audio, text, pdf, video, etc.</li>
+            <li>description, i.e. metadata</li>
+            <li>storage and preservation</li>
+            <li>lifecycle: identify things that need to be deleted, kept, or migrated to newer formats</li>
+            <li>format conversions, such as creating derivative files</li>
+            <li>workflows for ingesting new content correctly, i.e. required information, supported formats</li>
+            <li>searching, updating, viewing your content</li>
+            <li>controlling access</li>
+ 	      	</ul>
+	      </section>
+
+        <section>
+        	<section>
+        		<h2>Archiving vs. Managing</h2>
+        		<p>Libraries approach digital materials differently than other institutions</p>
+        		<p>Digital archiving implies another set of features in addition to basic digital asset management features</p>
+        	</section>
+        	<section>
+        		<h3>Archival Needs</h3>
+        		<ul>
+              <li>presentation of multiple items as a coherent unit, i.e. collections</li>
+              <li>hierarchical organization with varied levels of description</li>
+              <li>accessioning of content</li>
+              <li>top-down, collection-level driven</li>
+            </ul>
+          </section>
+          <section>
+          	<h3>Asset Managers</h3>
+         		<ul>
+         			<li>generally more item-level driven</li>
+            	<li>bottom-up</li>
+          		<li>collections or groups, but not in the archival sense</li>
+          	</ul>
+          </section>
+        </section>
+
+        <section>
+        	<section>
+        		<h2>Survey of Solutions</h2>
+        		<p>What's out there now to use as my digital repository or asset manager?</p>
+        	</section>
+        	<section>
+        	  <h3>Proprietary solutions</h3>
+            <p>
+            	Generally built around an existing library product, such as an ILS, or focus on specific type of
+              content or area:
+            </p>
+            <ul>
+              <li>ContentDM (Innovative)</li>
+              <li>Rosetta (ExLibris)</li>
+              <li>Canto (favors text documents for businesses)</li>
+              <li>Piction (favors images for business, gov. and museums)</li>
+              <li>and many, many more</li>
+            </ul>
+          </section>
+          <section>
+          	<h3>Open source solutions</h3>
+          	<p>Built on a specific technological platform, often using Fedora</p>
+          	<ul>
+            	<li>DSpace</li>
+            	<li>Islandora</li>
+            	<li>RODA (http://roda+community.org/)</li>
+            	<li>Omeka</li>
+            	<li>many others ...</li>
+           	</ul>
+          </section>
+        </section>
+				
+				<section>
+					<section>
+						<h2>Asset Management Pitfalls</h2>
+						<p>Looking for a repository solution? Watch out for ... </p>
+					</section>
+				
+					<section>
+						<h2>Assumptions</h2>
+						<ul>
+						  <li>"turnkey" solutions aim for the common denominator</li>
+				      <li>pre-fab modeling: organization of content, collections, rights management</li>
+				      <li>media types: A/V formats, file formats, data</li>
+				      <li>metadata: Dublin Core, EAD, or MARC</li>
+				  	</ul>
+					</section>
+					<section>
+						<h2>Customizations</h2>
+						<ul>
+							<li>your local implementation is limited to the constraints imposed by these assumptions</li>
+				  		<li>you will need to customize to overcome any of these constraints</li>
+				  		<li>you may need to customize just to get it to run "out of the box"</li>
+				  		<li>you'll need to customize even if it does run "out of the box" and you accept its constraints</li>
+				  		<li>did I mention you'll probably need to customize?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Costs</h2>
+						<ul>
+							<li>fiscal: $$$</li>
+				    	<li>technological: servers, storage, equipment</li>
+				    	<li>sociological: software developers, library technologists, users</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Bundles</h2>
+						<ul>
+							<li>they aren't designed to work in concert with one another</li>
+				  		<li>some aren't targeted towards libraries or archives</li>
+				  		<li>"stack" solutions: combination of tools and procecudes grouped into a collective product</li>
+						</ul>
+					</section>
+				</section>
+				
+				<section>
+					<h2>Hydra Fundamental Assumption</h2>
+					<blockquote>No single system can provide the full range of repository-based solutions for a given institution's needs</blockquote>
+				</section>
+
+				<section>
+					<h2>What's good about Hydra</h2>
+				  <ul>
+				  	<li>makes no assumptions about your data (well, actually one assumption)
+				  	<li>can model anything
+				  	<li>using any metadata standard
+				  	<li>using any content
+				  	<li>stored anywhere
+				  	<li>accessed by anyone or no one
+				  	<li>presented as anything (using HTML and Javascript)
+				  	<li>underlying technologies are abstracted (Fedora and Solr)
+				  	<li>it's "free" and open-source
+				  </ul>
+				</section>  
+
+
+        <section>
+        	<h2>What's not-so-good about Hydra</h2>
+        	<ul>
+          	<li>technologically daunting -- you're going to be overwhelmed. that's okay</li>
+          	<li>deep "stack" of technologies</li>
+          	<li>tied to the Ruby-on-Rails framework</li>
+          	<li>favors a Unix environment</li>
+          	<li>requires in-house expertise/ability/willingness</li>
+          	<li>not a turnkey solution (yet...)</li>
+          	<li>no Hydra hosting options</li>
+          </ul>
+        </section>
+
+      <section>
+      	<section>
+      	<h2>Why should I use it?</h2>
+      	  <ul>
+          	<li>Decide for yourself...</li>
+          	<li>Everything has costs</li>
+          </ul>
+      	</section>
+      	<section>
+        	<h3>Any solution will require some technical expertise as well as some customization</h3>
+        	<ul>
+        		<li>getting the system running
+        		<li>learning
+        		<li>integrating with exciting systems
+        	</ul>
+        </section>
+        <section>
+        	<h3>Why not?</h3>
+        	<ul>
+        	  <li>Proprietary solutions don't work "out of the box" either
+        	  <li>vendor may limit your ability to customize
+        	  <li>Any open source solution will require modifications to meet your needs
+        	  <li>Avoiding "reinventing the wheel" - Hydra includes basic functionality at its core enabling the user to
+        	  <li>get started relatively quickly with a rich set of features
+        	  <li>Can draw on a shared community of adopters and partners, each with their own technological resources
+        	  <li>borrow and use other people's work and add it to your hydra head
+        	</ul>
+        </section>
+      </section>
+
+      <section>
+      	<h1>end of Part 1</h1>
+      	<h3>Questions?</h3>
+      </section>
+
+
+    	<section>
+    		<h4>References</h4>
+    		Tom Cramer, "Introduction to Hydra" Sept. 25, 2012, DuraSpace Hot Topics Webinar Series
+    		http://projecthydra.org/
+
+    	</section>
 
 			</div>
 
