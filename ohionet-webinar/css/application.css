@@ -1,0 +1,6 @@
+@import url(reveal.css);
+@import url(theme/default.css);
+@import url(zenburn.css);
+.text-small li {
+  font-size: .75em;
+  line-height: 1em; }
