@@ -51,7 +51,7 @@
 						<h2>Hydra webinar in three parts</h2>
     				<ol>	
     				  <li>Background: Using Hydra as a digital asset manager</li>
-    				  <li>Technical Geekery: Hydra's technical components and what they're all about</li>
+    				  <li>Technical Matters: An overview of Hydra's technical components and what they're all about</li>
     				  <li>Building a Hydra Head: Starting down the path to building your own head</li>
     				</ol>
     				<p>There will a question and answer period after each part to help break-up the format</p>
@@ -374,6 +374,240 @@
         	<h1>end of Part 1</h1>
         	<h3>Questions?</h3>
         </section>
+
+        <!-- part two -->
+        <section>
+          <h2>Part 2: Technical Matters</h2>
+          <h4>An overview of Hydra's technical components and what they're all about</h4>
+        </section>
+
+        <section>
+        <h2>What is Hydra, technically?</h2>
+          <ul>
+            <li class="fragment">it's a web application</li>
+            <li class="fragment">specifically, it's a <em>Ruby on Rails</em> web application</li>
+            <li class="fragment">Built using the Blacklight and Hydra gems</li>
+            <li class="fragment">Fedora repository for creating and describing content</li>
+            <li class="fragment">Solr for searching</li>
+            <li class="fragment">
+              Various other "Rails-isms" for additional features
+              <ul>
+                <li>User accounts</li>
+                <li>Authentication and authorization</li>
+                <li>MySQL database or other RDMS</li>
+                <li>JQuery javascript library for building an interface</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2>What is Ruby on Rails?</h2>
+            <ul>
+              <li class="fragment">computer language (Ruby)</li>
+              <li class="fragment">framework for web applications (Rails)</li>
+              <li class="fragment">geared towards rapid development</li>
+              <li class="fragment">modularized features with <em>gems</em></li>
+            </ul>
+          </section>
+          <section>
+            <h2>Without Rails...</h2>
+            <img src="img/webapp-1.png" />
+          </section>
+          <section>
+            <h2>With Rails...</h2>
+            <img src="img/webapp-2.png" />
+          </section>
+          <section>
+            <h2>How to Use Rails</h2>
+            <blockquote>I really don't care about all the details</blockquote>
+            <ul>
+              <li class="fragment">convention over configuration</li>
+              <li class="fragment">auto-generate as much as possible:
+                <ul>
+                  <li>database table names</li>
+                  <li>field names</li>
+                  <li>relationships between tables</li>
+                  <li>most of the application code itself</li>
+                </ul>
+              </li>
+              <li class="fragment">rely on <em>gems</em> as much as possible</li>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Using a Database</h2>
+            <ul>
+              <li class="fragment">data is stored in tables</li>
+              <li class="fragment">some data is easier to model than others</li>
+              <li class="fragment">modeling library data is hard</li>
+            </ul>
+          </section>
+          <section>
+            <img class="diagram" src="img/data-model.jpg" />
+            <span>Source: <a href="http://www.dcm4che.org/confluence/download/attachments/496/pacstables_dcm4chee_216.jpg">DICOM Clinical Data Manager system</a></span>
+          </section>
+          <section>
+            <h2>Where it goes wrong</h2>
+            <ul>
+              <li>database tables get unwieldy when dealing with amorphous content</li>
+              <li>extending/changing/rearranging takes a lot of work</li>
+              <li>storing digital content in tables is problematic</li>
+              <li>data and metadata get separated</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <h2>We need ...</h2>
+            <ul>
+              <li class="fragment">something <strong>flexible</strong> and <strong>extensible</strong></li>
+              <li class="fragment">for <strong>digital objects</strong></li>
+              <li class="fragment">as a <strong>repository architecture</strong></li>
+            </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2>F E D O R A</h2>
+            <ul>
+              <li>flexible</li>
+              <li>extensible</li>
+              <li>digital</li>
+              <li>object</li>
+              <li>repository</li>
+              <li>architecture</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Fedora Features</h2>
+            <ul>
+              <li class="fragment">models the content, not the data</li>
+              <li class="fragment">multiple means of description and arrangment</li>
+              <li class="fragment">stores metadata and content data together</li>
+              <li class="fragment">supports a wide variety of storage options</li>
+              <li class="fragment">fundamental repository functions are built-in</li>
+              <li class="fragment">uses RDF for relationships, XML for metadata</li>
+            </ul>
+          </section>
+          <section>
+            <h2>Example Digital Object</h2>
+            <img src="img/fedora-1.png" />
+          </section>
+          <section>
+            <h2>Object Relationships</h2>
+            <img src="img/fedora-2.png" />
+          </section>
+          <section>
+            <h2>Fedora Hangups</h2>
+            <ul>
+              <li class="fragment">slow</li>
+              <li class="fragment">it's just a backend</li>
+              <li class="fragment">can't search like a traditional database</li>
+              <li class="fragment">requires a RDMS for searching RDF relationships</li>
+              <li class="fragment">if only we could search Fedora like an SQL database...</li>
+            </ul>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Solr</h2>
+            <h4>a search engine, all wrapped up and ready to go</h4>
+          </section>
+          <section>
+            <h2>About Solr</h2>
+            <ul>
+              <li class="fragment">originated as the Excite's search engine</li>
+              <li class="fragment">went open source, taken up by the Apache Foudation</li>
+              <li class="fragment">proprietary branch: Lucene</li>
+              <li class="fragment">open-source branch: Solr</li>
+            </ul>
+          </section>
+          <section>
+            <h2>What does Solr do, exactly?</h2>
+              <ul>
+              <li class="fragment">Indexes a sets of text documents</li>
+              <li class="fragment">
+                Provides many of the core-features of a modern-day information retrieval system:
+                <ul>
+                  <li class="fragment">boolean matching</li>
+                  <li class="fragment">vector space model matching</li>
+                  <li class="fragment">tunable relevance ranking</li>
+                  <li class="fragment">stop word removal</li>
+                  <li class="fragment">stemming</li>
+                  <li class="fragment">support for multiple languages</li>
+                  <li class="fragment">facet queries</li>
+                </ul>
+              </li>
+              <li class="fragment">very fast, easy to run</li>
+            </ul>
+          </section>
+          <section>
+            <h2>What's not to like?</h2>
+            <img src="img/solr-controls.jpg" />
+          </section>
+        </section>
+
+        <section>
+          <h2>Blacklight</h2>
+          <ul>
+            <li class="fragment">Rails gem for faceted search and discovery</li>
+            <li class="fragment">designed for library data</li>
+            <li class="fragment">provides a working interface to Solr</li>
+            <li class="fragment">
+              includes a basic web interface for:
+              <ul>
+                <li class="fragment">searching with queries and facets</li>
+                <li class="fragment">displaying lists of search results</li>
+                <li class="fragment">displaying individual item records</li>
+              </ul>
+            </li>
+            <li class="fragment">
+              additional functions:
+              <ul>
+                <li class="fragment">user accounts (using a Rails gem called Devise)</li>
+                <li class="fragment">bookmarking</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <section>
+            <h2>The Hydra Stack</h2>
+            <h4>putting it all together</h4>
+            <ul>
+              <li class="fragment">stores both content and metadata in Fedora</li>
+              <li class="fragment">manages the relationships between your objects</li>
+              <li class="fragment">indexes metadata into Solr for searching (so you don't have to mess with configuring solr)</li>
+              <li class="fragment">uses the Blacklight gem to provide the search and retrieval interface</li>
+            </ul>
+          </section>
+          <section>
+            <img src="img/hydra-head.png" />
+          </section>
+          <section>
+            <h2>What's left...</h2>
+            <ul>
+              <li class="fragment">you develop the interface to add/edit/delete content and link objects to one another</li>
+              <li class="fragment">build additional features and the user interface design</li>
+              <li class="fragment">accomplished mostly with gems</li>
+            </ul>
+          </section>
+          <section>
+            <h4>A hydra-head in action</h4>
+          </section>
+        </section>
+
+        <section>
+          <h1>end of Part 2</h1>
+          <h3>Questions?</h3>
+        </section>
+          
+
 
 
     	  <section>
