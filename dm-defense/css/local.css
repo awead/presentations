@@ -1,0 +1,51 @@
+.fixed-top {
+  position: absolute;
+  top: -270px;
+  left: 290px;
+}
+
+.text-inverted, .reveal h2.inverted {
+  color: black;
+}
+
+.reveal {
+  font-size: 32px;
+}
+
+.reveal blockquote {
+  width: 80%;
+}
+
+div.chart {
+  background-color: white;
+  width: 500px;
+}
+    
+div.line {
+  display: inline-block;
+  width: 5px;
+  height: 75px;
+  margin-right: 2px;
+  background-color: teal;
+}
+
+svg.canvas {
+  height: 50px;
+  width: 600px;
+}
+
+.reveal section img.logo {
+  padding: 10px;
+  background: none;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+    
+    
+
