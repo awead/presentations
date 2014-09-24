@@ -1,0 +1,101 @@
+/**
+ * Penn State theme for reveal.js.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+@import "../template/blobs";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+
+
+// Color scheme based off of blue in PSU logo
+// taken from http://www.colorschemer.com/online.html
+$psuBlue: #2f5398;
+$green: #2F983F;
+$greenGradient: darken( $green, 10% );
+$purple: #982F88;
+$purpleGradient: darken( $purple, 10% );
+$brown: #98732F;
+$gray: #777;
+$white: #FFF;
+
+// Speech bubbles
+$bubbleColor: $white;
+$bubbleBackground: $greenGradient;
+$bubbleBackgroundGradient: $green;
+
+// Reveal.JS settings
+$backgroundColor: $white;
+$mainColor: $gray;
+$headingColor: $psuBlue;
+$mainFont: 'Open Sans', sans-serif;
+$linkColor: $psuBlue;
+$linkColorHover: lighten( $linkColor, 20% );
+$headingFont: 'Montserrat', Impact, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: -0.03em;
+$headingTextTransform: none;
+$selectionBackgroundColor: #e7ad52;
+$mainFontSize: 30px;
+
+
+#psu-shield {
+  border: none;
+  width: 35%;
+  height: 35%;
+}
+
+.logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 500;
+}
+
+
+// Thought bubbles must be positioned manually
+.bubble-right {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 500;
+
+}
+
+.blob-outer {
+  @include blob($backgroundColor, $purple, $purpleGradient);
+}
+div.blob-outer {
+  padding: 50px;
+}
+
+.blob-inner {
+  @include blob($backgroundColor, $green, $greenGradient);
+}
+div.blob-inner {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+span.big-text {
+  font-size: 2em;
+}
+
+@media print {    
+  .no-print, .no-print * {
+    display: none !important;
+  }
+}
+
+@import "bubbles";
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
